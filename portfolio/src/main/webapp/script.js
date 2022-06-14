@@ -13,16 +13,23 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Cycles traits to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+traitIndex = 0;
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+function addTraits() {
+  const traits =
+      ['Student', 'Developer', 'Creative', 'Storyteller'];
+
+  // Cycle traits.
+  if (traitIndex == traits.length - 1) {
+      traitIndex = 0;
+  } else {
+      traitIndex++;
+  }
+  const trait = traits[traitIndex];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const traitContainer = document.getElementById('trait-container');
+  traitContainer.innerText = trait;
 }

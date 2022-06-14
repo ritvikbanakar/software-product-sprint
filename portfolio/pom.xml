@@ -16,7 +16,7 @@
 
     <!-- Project-specific properties -->
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>YOUR_PROJECT_ID_HERE</googleCloudProjectId>
+    <googleCloudProjectId>rbanakar-sps-summer22</googleCloudProjectId>
   </properties>
 
   <dependencies>
@@ -26,6 +26,13 @@
       <artifactId>javax.servlet-api</artifactId>
       <version>4.0.1</version>
     </dependency>
+
+<!-- Cloud Natural Language Library-->
+    <dependency>
+  <groupId>com.google.cloud</groupId>
+  <artifactId>google-cloud-language</artifactId>
+  <version>1.55.0</version>
+</dependency>
 
     <!-- Jetty -->
     <dependency>
@@ -63,6 +70,8 @@
           </execution>
         </executions>
       </plugin>
+
+      
 
       <!-- Package everything into a single executable jar file. -->
       <plugin>
